@@ -8,8 +8,19 @@ class RestaurantListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(restaurant.name),
+    return Container(
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.indigoAccent.withOpacity(0.2)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(restaurant.name),
+          Text(restaurant.cuisine),
+        ],
+      ),
     );
   }
 }
